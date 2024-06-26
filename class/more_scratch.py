@@ -1,0 +1,1 @@
+from scratch import my_super_awesome_func
