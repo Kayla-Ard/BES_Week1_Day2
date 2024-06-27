@@ -73,3 +73,19 @@ class InventoryManager:
             book = current.book
             print(f"Title: {book.title}, Author: {book.author}, Genre: {book.genre}, ISBN: {book.isbn}, Quantity: {book.quantity}")
             current = current.next
+            
+
+inventory_manager = InventoryManager()
+
+inventory_manager.add_book("The Great Gatsby", "F. Scott Fitzgerald", "Fiction", "1234567890", 10)
+inventory_manager.add_book("To Kill a Mockingbird", "Harper Lee", "Fiction", "1234567891", 5)
+inventory_manager.add_book("1984", "George Orwell", "Dystopian", "1234567892", 8)
+
+# the inventory
+inventory_manager.display_inventory()
+
+# removing a book
+inventory_manager.remove_book("1234567891")
+
+# inventory after removal
+inventory_manager.display_inventory()
